@@ -14,10 +14,11 @@ module Lce
   end
 
   class Configuration
-    attr_accessor :login, :password, :environment
+    attr_accessor :login, :password, :environment, :version
 
     def initialize
       @environment = :staging
+      @version = 1
     end
     
     def environment=(value)
