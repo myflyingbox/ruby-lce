@@ -1,0 +1,34 @@
+require 'lce/client/connection'
+require 'lce/client/errors'
+require 'lce/client/request'
+
+module Lce
+  class Client
+  
+    HOSTS = {
+      development: "http://localhost:9000",
+      staging: "https://test.lce.io",
+      production: "https://api.lce.io"
+    }
+    
+    include Connection
+    include Request  
+    include Errors
+      
+    attr_accessor :http_adapter
+    
+    def initialize
+      @http_adapter = Lce.configuration.http_adapter
+    end
+    
+    def host
+      HOSTS[Lce.configuration.environment]
+    end
+    
+    def version
+      raise VersionError.new("Version must be 1.") if Lce.configuration.version != 1
+      'v'+Lce.configuration.version.to_s
+    end
+
+  end
+end

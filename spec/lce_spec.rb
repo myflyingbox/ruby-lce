@@ -2,7 +2,10 @@ require 'spec_helper'
 
 describe Lce do
   describe "#configure" do
-
+    before do
+      Lce.reset
+    end
+    
     it 'has a configuration'  do
       expect(Lce.configuration).to be_a(Lce::Configuration)
     end
@@ -44,5 +47,8 @@ describe Lce do
         expect(Lce.configuration.password).to eq('password')
       end
     end      
+  end
+  describe do '#check'
+    
   end
 end
