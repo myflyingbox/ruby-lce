@@ -6,6 +6,12 @@ module Lce
         request(:get, p, params, format)
       end
 
+      def post(resource = nil, params = nil)
+        p = path(resource)
+        request(:post, p, params)
+      end
+
+
       private
 
       def path(resource = nil, id = nil, action = nil, format = nil)
@@ -18,7 +24,7 @@ module Lce
         return path
       end
 
-      def request(action, path, params, format)
+      def request(action, path, params, format = nil)
         response = connection.send(action, path, params)
         if success?(response)
           return response.body.data
@@ -39,6 +45,8 @@ module Lce
               raise Lce::Client::AccessDenied.new(response.body.error.message, response.body.error.type, response.body.error.details)
             when 'account_disabled'
               raise Lce::Client::AccountDisabled.new(response.body.error.message, response.body.error.type, response.body.error.details)
+            when 'internal'
+              raise Lce::Client::LceError.new(response.body.error.message, response.body.error.type, response.body.error.details)              
           end
         end
       end

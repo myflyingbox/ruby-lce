@@ -1,11 +1,17 @@
 require "lce/version"
 require "lce/client"
+require "lce/offer"
+require "lce/quote"
 require "logger"
 require "awesome_print"
 
 module Lce
   class << self
-    attr_accessor :configuration
+    attr_accessor :configuration, :client
+  end
+
+  def self.client
+    @client ||= Client.new
   end
 
   def self.configuration
@@ -22,7 +28,7 @@ module Lce
 
   def self.check
     begin  
-      Client.new.get
+      client.get
     rescue Lce::Client::Errors::LceError => e
       if configuration.raise_lce_errors
         raise e      
