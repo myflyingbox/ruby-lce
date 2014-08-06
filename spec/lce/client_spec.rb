@@ -3,14 +3,12 @@ require 'spec_helper'
 describe Lce::Client do
   describe "#http_adapter" do
     it "uses default faraday's adapter as a default" do
-      Lce.reset
       expect(subject.http_adapter).to be(Faraday.default_adapter)
 
     end
   end
   describe "#host" do
     it 'returns the correct host for the staging environment' do
-      Lce.reset
       expect(subject.host).to eql('https://test.lce.io')
     end
 
@@ -29,14 +27,12 @@ describe Lce::Client do
     end    
   end  
   describe "#path" do
-    before do 
-      Lce.reset
-    end
     it 'returns a root path as default' do
       expect(subject.send(:path).to_s).to eql('/')
     end
     context 'with a resource' do
       it 'returns a path with aversion and a resource' do
+        Lce.configuration.version = 1
         expect(subject.send(:path, :quotes).to_s).to eql('/v1/quotes')
       end
 

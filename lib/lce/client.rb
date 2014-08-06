@@ -26,7 +26,7 @@ module Lce
     end
     
     def version
-      raise VersionError.new("Version must be 1.") if Lce.configuration.version != 1
+      raise VersionError.new("Wrong API version",' wrong_api_version', "Version must be 1.") if Lce.configuration.version != 1
       'v'+Lce.configuration.version.to_s
     end
 

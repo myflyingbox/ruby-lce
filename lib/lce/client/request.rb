@@ -21,7 +21,7 @@ module Lce
       def request(action, path, params, format)
         response = connection.send(action, path, params)
         if success?(response)
-          return response.body 
+          return response.body.data
         else
           error!(response)
           return nil

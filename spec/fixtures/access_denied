@@ -1,0 +1,20 @@
+HTTP/1.1 401 Unauthorized
+Server: nginx/1.6.0
+Date: Wed, 06 Aug 2014 12:11:35 GMT
+Content-Type: application/json
+Content-Length: 267
+Connection: keep-alive
+WWW-Authenticate: Basic realm="lce.io API"
+Lce-Env: staging
+
+{
+  "status":"failure",
+  "error":{
+    "type":"access_denied",
+    "message":"Access denied.",
+    "details":[
+      "Make sure you are using the correct credentials. Contacts us via support@lce.io if you need some help."
+    ]
+  },
+  "self":"https://test.lce.io/"
+}

@@ -1,0 +1,20 @@
+HTTP/1.1 403 Forbidden
+Server: nginx/1.6.0
+Date: Wed, 06 Aug 2014 12:52:25 GMT
+Content-Type: application/json
+Content-Length: 256
+Connection: keep-alive
+WWW-Authenticate: Basic realm="lce.io API"
+Lce-Env: staging
+
+{
+  "status":"failure",
+  "error":{
+    "type":"account_disabled",
+    "message":"Account disabled.",
+    "details":[
+      "Please contact our support team at support@lce.io if you need this account activated."
+    ]
+  },
+  "self":"https://test.lce.io/"
+}

@@ -1,16 +1,15 @@
 require 'spec_helper'
 
 describe Lce do
-  describe "#configure" do
-    before do
-      Lce.reset
-    end
-    
+  describe ".configure" do
+   
     it 'has a configuration'  do
+      Lce.reset
       expect(Lce.configuration).to be_a(Lce::Configuration)
     end
    
     it 'has a default environment'  do
+      Lce.reset
       expect(Lce.configuration.environment).to be :staging
     end
 
@@ -19,10 +18,12 @@ describe Lce do
     end
 
     it 'doesn\'t have a default login'  do
+      Lce.reset
       expect(Lce.configuration.login).to be_nil
     end
 
     it 'doesn\'t have a default password'  do
+      Lce.reset    
       expect(Lce.configuration.password).to be_nil
     end
 
@@ -48,7 +49,39 @@ describe Lce do
       end
     end      
   end
-  describe do '#check'
-    
+  describe '.check' do 
+    context 'without authentication' do
+      before do
+        Lce.configure do |config|
+          config.environment = :staging
+          config.login = nil
+          config.password = nil
+          config.logger.level = Logger::FATAL
+        end             
+      end
+      it 'raises an AccessDenied exception when not authenticated properly' do
+        stub_request(:get, "https://test.lce.io/").to_return(fixture('access_denied'))
+        expect {Lce.check}.to raise_error Lce::Client::Errors::AccessDenied
+      end
+    end
+    context 'with authentication'do
+      before do
+        Lce.configure do |config|
+          config.environment = :staging
+          config.login = 'login'
+          config.password = 'password'
+          config.logger.level = Logger::FATAL
+        end              
+      end
+      it 'raises an AccountDisabled exception when account is disabled' do
+        stub_request(:get, "https://login:password@test.lce.io/").to_return(fixture('account_disabled'))
+        expect {Lce.check}.to raise_error Lce::Client::Errors::AccountDisabled
+      end    
+      it 'return a description of the service' do    
+        stub_request(:get, "https://login:password@test.lce.io/").to_return(fixture('check'))
+        expect(Lce.check.host).to eql('test.lce.io')
+      end    
+    end    
+
   end
 end
