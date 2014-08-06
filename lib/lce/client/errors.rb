@@ -11,7 +11,7 @@ module Lce
         def to_s
           s = super
           d = (@details.is_a? Array)? @details.join(' ') : @details
-          s+= "\n#{@d}" if d && !d.empty?
+          s+= "\n#{d}" if d && !d.empty?
           s
         end
       end
