@@ -9,6 +9,8 @@ module Lce
         def connection
           Faraday.new(:url => host) do |faraday|
             faraday.basic_auth(Lce.configuration.login, Lce.configuration.password)
+            faraday.headers['Lce-Origin-Application'] = 'ruby-lce'
+            faraday.headers['Lce-Origin-Version'] = Lce::VERSION
             faraday.request :json
             faraday.response :mashify               
             faraday.response :oj, :content_type => /\bjson$/                           
