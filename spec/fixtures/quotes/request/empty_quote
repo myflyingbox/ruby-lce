@@ -1,0 +1,15 @@
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.6.0
+Date: Tue, 12 Aug 2014 12:59:10 GMT
+Content-Type: application/json
+Content-Length: 471
+Connection: keep-alive
+
+{
+  "status":"failure",
+  "error":{
+    "type":"internal",
+    "message":"quote[shipper] is missing, quote[shipper][country] is missing, quote[shipper][postal_code] is missing, quote[shipper][city] is missing, quote[recipient] is missing, quote[recipient][country] is missing, quote[recipient][is_a_company] is missing, quote[recipient][postal_code] is missing, quote[recipient][city] is missing, quote[parcels] is missing"
+  },
+  "self":"https://test.lce.io/v1/quotes"
+}
