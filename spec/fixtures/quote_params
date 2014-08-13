@@ -1,0 +1,25 @@
+{
+  "quote":{
+    "shipper":{
+      "country":"FR",
+      "postal_code":"31300",
+      "city":"Toulouse"
+
+    },
+    "recipient":{
+      "country":"FR",
+      "postal_code":"06000",
+      "city":"Nice",
+      "is_a_company":true
+    },
+    "parcels":[
+      {
+        "length":15,
+        "width":15,
+        "height":15,
+        "weight":2
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,15 @@
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.6.0
+Date: Wed, 13 Aug 2014 12:47:00 GMT
+Content-Type: application/json
+Content-Length: 156
+Connection: keep-alive
+
+{
+  "status":"failure",
+  "error":{
+    "type":"internal",
+    "message":"quote[recipient][city] is missing"
+  },
+  "self":"https://test.lce.io/v1/quotes"
+}

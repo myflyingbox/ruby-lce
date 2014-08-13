@@ -1,0 +1,15 @@
+HTTP/1.1 404 Not Found
+Server: nginx/1.6.0
+Date: Wed, 13 Aug 2014 15:33:24 GMT
+Content-Type: application/json
+Content-Length: 185
+Connection: keep-alive
+
+{
+  "status":"failure",
+  "error":{
+    "type":"resource_not_found",
+    "message":"Quote not found"
+  },
+  "self":"https://test.lce.io/v1/quotes/cd8d1a03-bfec-4115-87ef-8f8ba91a7198"
+}

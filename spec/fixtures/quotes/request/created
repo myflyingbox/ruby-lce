@@ -1,0 +1,492 @@
+HTTP/1.1 201 Created
+Server: nginx/1.6.0
+Date: Wed, 13 Aug 2014 12:57:01 GMT
+Content-Type: application/json
+Content-Length: 17616
+Connection: keep-alive
+Lce-Env: staging
+
+{
+  "status":"success",
+  "self":"https://test.lce.io/v1/quotes",
+  "data":{
+    "id":"cd8d1a03-bfec-4115-87ef-8f8ba91a7199",
+    "created_at":"2014-08-13T14:56:55+02:00",
+    "ordered":false,
+    "ordered?":false,
+    "shipper":{
+      "country":"FR",
+      "postal_code":"31300",
+      "city":"Toulouse"
+    },
+    "recipient":{
+      "country":"FR",
+      "postal_code":"06000",
+      "is_a_company":"true",
+      "city":"Nice"
+    },
+    "parcels":[
+      {
+        "width":15.0,
+        "length":15.0,
+        "height":15.0,
+        "weight":2.0
+      }
+    ],
+    "offers":[
+      {
+        "id":"ff75b691-a2e0-46b0-9909-d529b2dbb90c",
+        "quote_id":"cd8d1a03-bfec-4115-87ef-8f8ba91a7199",
+        "product_id":"371ce146-1e6c-4a44-9a43-e0f124818f99",
+        "orderable?":true,
+        "product":{
+          "delay":"24",
+          "collection_informations":{
+            "en":"Post Office Drop Off \r\n",
+            "es":"Depósito en oficina de correos en Francia.",
+            "fr":"Dépôt en bureau de poste \r\n"
+          },
+          "delivery_informations":{
+            "en":"Drop off at your nearest Post Office \r\nNext day delivery before 13:00 pm\r\nDelivered wih POD\r\nMoney-back guarantee (Terms & conditions)\r\n\r\n",
+            "es":"Entrega en 24h antes de 13:00 (hora local)",
+            "fr":"J+1         \r\nLivraison le lendemain avant 13H"
+          },
+          "details":{
+            "en":"Drop off at your nearest Post Office \r\nNext day delivery before 13:00 pm\r\nDelivered wih POD\r\nMoney-back guarantee (Terms & conditions)\r\n",
+            "es":"Servicio Chronopost \r\nIMPORTANTE: peso máximo por paquete : 30 kg",
+            "fr":"Dépôt en bureau de poste. \r\nLivraison le lendemain avant 13H.\r\nPossibilité de collecte sur demande auprès de LCE pour les clients avec des envois réguliers.\r\nDélai garanti sous conditions (voir CGV).\r\n"
+          },
+          "export_from":[
+            "FR",
+            "MC"
+          ],
+          "id":"371ce146-1e6c-4a44-9a43-e0f124818f99",
+          "logo":"lce_yellow",
+          "code":"lce_yellow_express_13",
+          "name":"Lce Yellow Express 13",
+          "pick_up":false,
+          "drop_off":true,
+          "preset_delivery_location":false
+        },
+        "price":{
+          "formatted":"€6.25",
+          "currency":"EUR",
+          "amount":"6.25",
+          "amount_in_cents":625
+        },
+        "price_vat":{
+          "formatted":"€1.25",
+          "currency":"EUR",
+          "amount":"1.25",
+          "amount_in_cents":125
+        },
+        "total_price":{
+          "formatted":"€7.50",
+          "currency":"EUR",
+          "amount":"7.5",
+          "amount_in_cents":750
+        },
+        "collection_dates":null
+      },
+      {
+        "id":"563aeac0-4a88-4269-b9b7-48964a8678f0",
+        "quote_id":"cd8d1a03-bfec-4115-87ef-8f8ba91a7199",
+        "product_id":"b8b9a657-2b51-41f5-ab35-ac84bc9864bc",
+        "orderable?":true,
+        "product":{
+          "delay":"24",
+          "collection_informations":{
+            "en":"Post Office Drop Off \r\n",
+            "es":"Depósito en oficina de correos en Francia.",
+            "fr":"Dépôt en bureau de poste\r\n"
+          },
+          "delivery_informations":{
+            "en":"Next Day\r\nNext day delivery at pickup location\r\n",
+            "es":"Déposito en Punto Pack ",
+            "fr":"J+1  \r\nLivraison le lendemain en point relais.\r\n"
+          },
+          "details":{
+            "en":"Drop off at your nearest Post Office \r\nDelivered wih POD\r\nNext day delivery \r\nWeight :30 kg per pkg\r\nMoney-back guarantee (Terms & conditions)\r\n",
+            "es":"Servicio Chronopost \r\nIMPORTANTE: peso máximo por paquete : 20 kg",
+            "fr":"Dépôt en bureau de poste. \r\nLivraison le lendemain en point relais.\r\nPossibilité de collecte sur demande auprès de LCE pour les clients avec des envois réguliers.\r\nTrouvez votre point relais sur notre menu adresse.\r\nDélai  garanti sous conditions (voir CGV).\r\n"
+          },
+          "export_from":[
+            "FR",
+            "MC"
+          ],
+          "id":"b8b9a657-2b51-41f5-ab35-ac84bc9864bc",
+          "logo":"lce_yellow",
+          "code":"lce_yellow_express_shop",
+          "name":"Lce Yellow Express Shop",
+          "pick_up":false,
+          "drop_off":true,
+          "preset_delivery_location":true
+        },
+        "price":{
+          "formatted":"€6.95",
+          "currency":"EUR",
+          "amount":"6.95",
+          "amount_in_cents":695
+        },
+        "price_vat":{
+          "formatted":"€1.39",
+          "currency":"EUR",
+          "amount":"1.39",
+          "amount_in_cents":139
+        },
+        "total_price":{
+          "formatted":"€8.34",
+          "currency":"EUR",
+          "amount":"8.34",
+          "amount_in_cents":834
+        },
+        "collection_dates":null
+      },
+      {
+        "id":"d4e3b562-3f1b-49c7-9611-fc3befba847a",
+        "quote_id":"cd8d1a03-bfec-4115-87ef-8f8ba91a7199",
+        "product_id":"2747812c-e725-43c0-a076-65b7b9afa99a",
+        "orderable?":true,
+        "product":{
+          "delay":"48-72",
+          "collection_informations":{
+            "en":"COLLECTION TODAY*      \r\n*If you book before 10 am (local time)",
+            "es":"Recogidas :  antes de las 13 horas (según población)",
+            "fr":"Collecte aujourd'hui*\r\n*Pour toute commande passée avant 10H  (heure locale)."
+          },
+          "delivery_informations":{
+            "en":"48/72\r\nDelivery within 2/3 days in Europe.",
+            "es":"Nacional : 24/72 según el destino \r\nInternacional: 48/72 según el pais de destino. Aunque hay que  tener en cuenta que se tratan de plazos de entrega no garantizados. Puedes consultar el plazo de entrega correspondiente en la página de resultados de búsqueda.",
+            "fr":"Livraison en J+2\r\nLivraison en 48/96 h en Europe."
+          },
+          "details":{
+            "en":"Delivery Monday-Friday only \r\nAdditional Service Options see : Terms & conditions. \r\nInternational transit times are estimated and assume no Customs delays. Please always provide a local contact number for the recipient.",
+            "es":"Servicio UPS STANDARD con entrega en 24/72 horas en función de la distancia dentro de España. \r\nIMPORTANTE: La suma de todos los lados no puede ser mas de 300cm y el peso máximo admitido por bulto es de 70Kg. ",
+            "fr":"Enlèvement sur site le jour même pour toute commande passée avant 10H Livraison sous 48/72h en Europe (hors délai douane)\r\nPour les retours, modifications d'adresses, adresse erronée voir CGV."
+          },
+          "export_from":[
+            "FR"
+          ],
+          "id":"2747812c-e725-43c0-a076-65b7b9afa99a",
+          "logo":"lce_brown",
+          "code":"lce_brown_economy",
+          "name":"Lce Brown Economy",
+          "pick_up":true,
+          "drop_off":false,
+          "preset_delivery_location":false
+        },
+        "price":{
+          "formatted":"€9.38",
+          "currency":"EUR",
+          "amount":"9.38",
+          "amount_in_cents":938
+        },
+        "price_vat":{
+          "formatted":"€1.88",
+          "currency":"EUR",
+          "amount":"1.88",
+          "amount_in_cents":188
+        },
+        "total_price":{
+          "formatted":"€11.26",
+          "currency":"EUR",
+          "amount":"11.26",
+          "amount_in_cents":1126
+        },
+        "collection_dates":[
+          {
+            "date":"2014-08-13",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-14",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-15",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-18",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-19",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-20",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-21",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-22",
+            "cutoff":""
+          }
+        ]
+      },
+      {
+        "id":"f16b6083-a992-4622-9a8d-0a048d088857",
+        "quote_id":"cd8d1a03-bfec-4115-87ef-8f8ba91a7199",
+        "product_id":"c0c72c82-6bfc-468b-b3a8-5bbd4c7aca5e",
+        "orderable?":true,
+        "product":{
+          "delay":"24",
+          "collection_informations":{
+            "en":"COLLECTION TODAY* \r\n*If you book before midday (local time)",
+            "es":"Recogida hoy si contrata antes de mediodía (hora local).*",
+            "fr":"Collecte aujourd'hui* \r\n*Pour toute commande passée avant midi (heure locale)."
+          },
+          "delivery_informations":{
+            "en":"NEXT DAY",
+            "es":"Entrega mañana ",
+            "fr":"Livraison le lendemain en France"
+          },
+          "details":{
+            "en":"Collection Monday-Friday only \r\nDelivery between 9.00am-6:00pm local time \r\nDelivery Monday-Friday only ",
+            "es":"Localidades remotas, pedido de recogida con un día de antelación.\r\nIMPORTANTE: La suma de todos los lados no puede ser mas de 300 cm de largo.\r\nEl número de teléfono del destinatario es obligatorio.\r\nPlazo no garantizado",
+            "fr":"Enlèvement entre 13.00 et 18:00 (heure locale)\r\nLes délais sont donnés à titre purement indicatifs. \r\nDélai non garanti;"
+          },
+          "export_from":[
+            "FR"
+          ],
+          "id":"c0c72c82-6bfc-468b-b3a8-5bbd4c7aca5e",
+          "logo":"lce_red",
+          "code":"lce_red_express",
+          "name":"Lce Red Express",
+          "pick_up":true,
+          "drop_off":false,
+          "preset_delivery_location":false
+        },
+        "price":{
+          "formatted":"€9.65",
+          "currency":"EUR",
+          "amount":"9.65",
+          "amount_in_cents":965
+        },
+        "price_vat":{
+          "formatted":"€1.93",
+          "currency":"EUR",
+          "amount":"1.93",
+          "amount_in_cents":193
+        },
+        "total_price":{
+          "formatted":"€11.58",
+          "currency":"EUR",
+          "amount":"11.58",
+          "amount_in_cents":1158
+        },
+        "collection_dates":[
+          {
+            "date":"2014-08-13",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-14",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-15",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-18",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-19",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-20",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-21",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-22",
+            "cutoff":""
+          }
+        ]
+      },
+      {
+        "id":"8d4e2fad-1c8f-4a39-81ff-d761bd8858ba",
+        "quote_id":"cd8d1a03-bfec-4115-87ef-8f8ba91a7199",
+        "product_id":"e975259c-8c99-4f14-9f4d-e2428d4baf75",
+        "orderable?":true,
+        "product":{
+          "delay":"24",
+          "collection_informations":{
+            "en":"COLLECTION TODAY*\r\n*If you book before midday (local time).",
+            "es":"Recogida hoy si contrata antes de la 12:00",
+            "fr":"Collecte aujourd'hui*\r\n*Pour toute commande passée avant 12H (heure locale)."
+          },
+          "delivery_informations":{
+            "en":"NEXT DAY \r\nNext business day delivery",
+            "es":"Tiempo de transito: 24 Horas",
+            "fr":"Livraison en J+1 avant midi\r\nLivraison en 24h en Europe et de 48 à 96h dans le reste du monde selon pays de destination."
+          },
+          "details":{
+            "en":"Collection between 2:00 Pm-5.30pm\r\nCollection Monday-Friday only                         \r\nDelivery between 2.00pm-5.30pm local time\r\nDelivery Monday-Friday only\r\nNo courier service can be guaranteed; international transit times are estimated and assume no Customs delays. Please always provide a local contact number for the recipient.",
+            "es":"Recogidas en poblaciones remotas deberán activarse, como mínimo, con un día hábil de antelación (de lunes a viernes), antes de las 17 horas.\r\nEl precio del servicio incluye 3 intentos de recogida y entrega. Es muy importante que no los agotes.\r\nIMPORTANTE: La suma de todos los lados no puede ser mas de 300cm y el peso máximo admitido por bulto es de 70Kg. ",
+            "fr":"Enlèvement sur site le jour même pour toute commande passée avant 10H Livraison sous 48/72h en Europe (hors délai douane)\r\nPour les retours, modifications d'adresses, adresse erronée voir CGV."
+          },
+          "export_from":[
+            "FR"
+          ],
+          "id":"e975259c-8c99-4f14-9f4d-e2428d4baf75",
+          "logo":"lce_brown",
+          "code":"lce_brown_express",
+          "name":"Lce Brown Express",
+          "pick_up":true,
+          "drop_off":false,
+          "preset_delivery_location":false
+        },
+        "price":{
+          "formatted":"€14.78",
+          "currency":"EUR",
+          "amount":"14.78",
+          "amount_in_cents":1478
+        },
+        "price_vat":{
+          "formatted":"€2.96",
+          "currency":"EUR",
+          "amount":"2.96",
+          "amount_in_cents":296
+        },
+        "total_price":{
+          "formatted":"€17.74",
+          "currency":"EUR",
+          "amount":"17.74",
+          "amount_in_cents":1774
+        },
+        "collection_dates":[
+          {
+            "date":"2014-08-13",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-14",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-15",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-18",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-19",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-20",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-21",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-22",
+            "cutoff":""
+          }
+        ]
+      },
+      {
+        "id":"b03d11ac-2d6e-4025-96c4-70b497be87d6",
+        "quote_id":"cd8d1a03-bfec-4115-87ef-8f8ba91a7199",
+        "product_id":"ff2e3f0b-c29f-46d7-9485-a252f4116a5a",
+        "orderable?":true,
+        "product":{
+          "delay":"24-48",
+          "collection_informations":{
+            "en":"COLLECTION TODAY*      \r\n*If you book before midday (local time)",
+            "es":"Recogida hoy si contrata antes de la 12:00",
+            "fr":"Collecte aujourd'hui* \r\n*Pour toute commande passée avant midi (heure locale). "
+          },
+          "delivery_informations":{
+            "en":"NEXT DAY \r\nDelivery the next working day in Europe.\r\n2/6 days  delivery in the rest of the world.",
+            "es":"Tiempo de transito: 24/48 Horas",
+            "fr":"J+1  \r\nLivraison le lendemain dans la journée en Europe.\r\nLivraison sous 2 à 6 jours ouvrés pour le reste du monde. "
+          },
+          "details":{
+            "en":"Delivery Monday-Friday only \r\nAdditional Service Options see : Terms & conditions. \r\nInternational transit times are estimated and assume no Customs delays. Please always provide a local contact number for the recipient.",
+            "es":"Recogidas en poblaciones remotas deberán activarse, como mínimo, con un día hábil de antelación (de lunes a viernes).\r\nEl precio del servicio incluye 3 intentos de recogida y entrega. Es muy importante que no los agotes.\r\nIMPORTANTE: La suma de todos los lados no puede ser mas de 300cm y el peso máximo admitido por bulto es de 68Kg. ",
+            "fr":"Enlèvement sur site le jour même pour toute commande passée avant  12:00. Livraison le jour ouvré suivant dans la journée.\r\nPour les retours, modifications d'adresses, adresse erronée voir CGV."
+          },
+          "export_from":[
+            "FR"
+          ],
+          "id":"ff2e3f0b-c29f-46d7-9485-a252f4116a5a",
+          "logo":"lce_purple",
+          "code":"lce_purple_express",
+          "name":"Lce Purple Express",
+          "pick_up":true,
+          "drop_off":false,
+          "preset_delivery_location":false
+        },
+        "price":{
+          "formatted":"€23.14",
+          "currency":"EUR",
+          "amount":"23.14",
+          "amount_in_cents":2314
+        },
+        "price_vat":{
+          "formatted":"€4.63",
+          "currency":"EUR",
+          "amount":"4.63",
+          "amount_in_cents":463
+        },
+        "total_price":{
+          "formatted":"€27.77",
+          "currency":"EUR",
+          "amount":"27.77",
+          "amount_in_cents":2777
+        },
+        "collection_dates":[
+          {
+            "date":"2014-08-13",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-14",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-15",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-18",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-19",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-20",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-21",
+            "cutoff":""
+          },
+          {
+            "date":"2014-08-22",
+            "cutoff":""
+          }
+        ]
+      }
+    ],
+    "origin":null
+  }
+}

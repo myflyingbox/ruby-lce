@@ -1,4 +1,6 @@
 require 'hashie'
+require 'paginated_array'
+
 module Lce
   class Quote < Hashie::Mash
     include Hashie::Extensions::Coercion
@@ -11,10 +13,13 @@ module Lce
         new(response)
       end
       
-      def all(page = 1)
-        page = 1 if page <= 0
-        response = Lce.client.get('quotes', nil, nil, nil , {page: page})
-        response.map do |q|
+      def all(page = nil)
+        if page
+          page = 1 if page <= 0
+          options = {page: page}
+        end
+        response = Lce.client.get('quotes', nil, nil, nil , options)
+        response.map! do |q|
           new(q)
         end        
       end

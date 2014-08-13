@@ -27,10 +27,22 @@ module Lce
       def request(action, path, params, format = nil)
         response = connection.send(action, path, params)
         if success?(response)
-          return response.body.data
+          return process_data(response.body)
         else
           error!(response)
           return nil
+        end
+      end
+      
+      def process_data(body)
+        if body.data.is_a? Array
+          a = PaginatedArray.new(body[:count], body[:page], body[:per_page])
+          body.data.each do |d|
+            a << d
+          end
+          return a
+        else
+          return body.data
         end
       end
       
@@ -45,7 +57,7 @@ module Lce
               raise Lce::Client::AccessDenied.new(response.body.error.message, response.body.error.type, response.body.error.details)
             when 'account_disabled'
               raise Lce::Client::AccountDisabled.new(response.body.error.message, response.body.error.type, response.body.error.details)
-            when 'internal'
+            when 'internal', 'resource_not_found'
               raise Lce::Client::LceError.new(response.body.error.message, response.body.error.type, response.body.error.details)              
           end
         end
