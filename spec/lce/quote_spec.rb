@@ -55,14 +55,14 @@ describe Lce::Quote do
     let(:id) {'cd8d1a03-bfec-4115-87ef-8f8ba91a7199'}
     it 'returns a quote' do
       stub_request(:get, "https://login:password@test.lce.io/v1/quotes/#{id}")
-        .to_return(fixture('quotes/request/found'))
+        .to_return(fixture('quotes/find/found'))
       expect(Lce::Quote.find(id).id).to eql(id)    
     end
     context 'inexistant quote' do 
       let(:id) {'cd8d1a03-bfec-4115-87ef-8f8ba91a7198'}
       it 'returns a quote' do
         stub_request(:get, "https://login:password@test.lce.io/v1/quotes/#{id}")
-          .to_return(fixture('quotes/request/not_found'))
+          .to_return(fixture('quotes/find/not_found'))
         expect{Lce::Quote.find(id).id}.to raise_error(Lce::Client::Errors::LceError, 'Quote not found')
       end    
     end
@@ -70,7 +70,7 @@ describe Lce::Quote do
   describe ".all" do 
     before do 
       stub_request(:get, "https://login:password@test.lce.io/v1/quotes")
-        .to_return(fixture('quotes/request/all'))            
+        .to_return(fixture('quotes/all/page_1'))            
     end
     it 'returns all quotes' do
       expect(Lce::Quote.all.size).to eql(25)    
@@ -95,7 +95,7 @@ describe Lce::Quote do
     context 'with a second page' do
       before do 
         stub_request(:get, "https://login:password@test.lce.io/v1/quotes?page=2")
-          .to_return(fixture('quotes/request/all_page2'))            
+          .to_return(fixture('quotes/all/page_2'))            
       end
       it 'returns all quotes' do
         expect(Lce::Quote.all(2).size).to eql(4)    
