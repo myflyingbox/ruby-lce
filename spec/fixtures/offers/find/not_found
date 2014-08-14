@@ -1,0 +1,15 @@
+HTTP/1.1 404 Not Found
+Server: nginx/1.6.0
+Date: Thu, 14 Aug 2014 12:35:24 GMT
+Content-Type: application/json
+Content-Length: 185
+Connection: keep-alive
+
+{
+  "status":"failure",
+  "error":{
+    "type":"resource_not_found",
+    "message":"Offer not found"
+  },
+  "self":"https://test.lce.io/v1/offers/ff75b691-a2e0-46b0-9909-d529b2dbb90d"
+}
