@@ -27,14 +27,27 @@ module Lce
       def request(action, path, params, format = nil)
         response = connection.send(action, path, params)
         if success?(response)
-          return process_data(response.body)
+          return process_data(response.headers['content-type'], response.body)
         else
           error!(response)
           return nil
         end
       end
+
+      def process_data(type, body)
+        case type
+          when 'application/json'
+            process_json(body)
+          when 'application/pdf'
+            process_pdf(body)
+        end
+      end
+
+      def process_pdf(body)
+        body
+      end
       
-      def process_data(body)
+      def process_json(body)
         if body.data.is_a? Array
           a = PaginatedArray.new(body[:count], body[:page], body[:per_page])
           body.data.each do |d|
@@ -47,7 +60,7 @@ module Lce
       end
       
       def success?(response)
-        response.status.between?(200, 299) && response.body.status == "success"
+        response.status.between?(200, 299) && (response.headers['content-type'] != 'application/json' || response.body.status == "success")
       end
       
       def error!(response)

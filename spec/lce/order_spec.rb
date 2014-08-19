@@ -94,5 +94,21 @@ describe Lce::Order do
       expect(Lce::Order.all.per_page).to eql(25)
     end    
 
+  end 
+  
+  describe "#labels" do 
+    let(:id) {'8c43a2e1-a7ff-49fd-807e-3877d6dadc28'}
+    it 'returns the labels for this order' do
+      stub_request(:get, "https://login:password@test.lce.io/v1/orders/#{id}")
+        .to_return(fixture('orders/find/found'))
+      stub_request(:get, "https://login:password@test.lce.io/v1/orders/#{id}/labels.pdf")
+        .to_return(fixture('orders/labels/response'))                
+        
+      order = Lce::Order.find(id)
+      labels_file = File.read('spec/fixtures/orders/labels/labels.pdf', {mode: 'rb' })
+      order.write_labels("grouooo.pdf")
+      expect(order.labels).to eql(labels_file)
+    end      
   end    
+    
 end
