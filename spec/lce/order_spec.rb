@@ -110,5 +110,28 @@ describe Lce::Order do
       expect(order.labels).to eql(labels_file)
     end      
   end    
+
+  describe "#tracking" do 
+    let(:id) {'8c43a2e1-a7ff-49fd-807e-3877d6dadc28'}
+    it 'returns the tracking for this order' do
+      stub_request(:get, "https://login:password@test.lce.io/v1/orders/#{id}")
+        .to_return(fixture('orders/find/found'))
+      stub_request(:get, "https://login:password@test.lce.io/v1/orders/#{id}/tracking")
+        .to_return(fixture('orders/tracking'))                       
+        
+      tracking_events_by_parcel = [{
+        "parcel_index"=>0,
+        "events"=> [{
+          "code"=>"shipment_created",
+          "happened_at"=>"2014-08-19T16:41:00+02:00",
+          "label"=>{"fr"=>"Expédition créée", "en"=>"Shipment created"},
+          "location"=>{"name"=>"Web Services"}
+        }]
+      }]      
+                  
+      order = Lce::Order.find(id)
+      expect(order.tracking).to eql(tracking_events_by_parcel)
+    end      
+  end  
     
 end

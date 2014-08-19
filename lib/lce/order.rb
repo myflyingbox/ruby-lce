@@ -41,5 +41,9 @@ module Lce
         f.write(labels)
       end   
     end  
+    
+    def tracking
+      @tracking = Lce.client.get('orders', id, 'tracking')      
+    end        
   end
 end

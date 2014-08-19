@@ -1,0 +1,30 @@
+HTTP/1.1 200 OK
+Server: nginx/1.6.0
+Date: Tue, 19 Aug 2014 18:26:49 GMT
+Content-Type: application/json
+Content-Length: 477
+Connection: keep-alive
+Lce-Env: staging
+
+{
+  "status":"success",
+  "self":"https://test.lce.io/v1/orders/8c43a2e1-a7ff-49fd-807e-3877d6dadc28/tracking",
+  "data":[
+    {
+      "parcel_index":0,
+      "events":[
+        {
+          "code":"shipment_created",
+          "happened_at":"2014-08-19T16:41:00+02:00",
+          "label":{
+            "fr":"Expédition créée",
+            "en":"Shipment created"
+          },
+          "location":{
+            "name":"Web Services"
+          }
+        }
+      ]
+    }
+  ]
+}
