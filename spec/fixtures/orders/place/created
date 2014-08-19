@@ -1,0 +1,106 @@
+HTTP/1.1 201 Created
+Server: nginx/1.6.0
+Date: Tue, 19 Aug 2014 16:41:49 GMT
+Content-Type: application/json
+Content-Length: 3122
+Connection: keep-alive
+Lce-Env: staging
+
+{
+  "status":"success",
+  "self":"https://test.lce.io/v1/orders",
+  "data":{
+    "id":"8c43a2e1-a7ff-49fd-807e-3877d6dadc28",
+    "offer_id":"ff75b691-a2e0-46b0-9909-d529b2dbb90c",
+    "product_id":"371ce146-1e6c-4a44-9a43-e0f124818f99",
+    "created_at":"2014-08-19T18:41:48+02:00",
+    "shipper":{
+      "company":null,
+      "name":"Firstname Lastname",
+      "street":"street",
+      "postal_code":"31300",
+      "country":"FR",
+      "phone":"+33699999999",
+      "email":"support@lce.io",
+      "city":"Toulouse",
+      "state":null
+    },
+    "recipient":{
+      "company":null,
+      "name":"Firstname Lastname",
+      "street":"street",
+      "postal_code":"06000",
+      "country":"FR",
+      "phone":"+33699999999",
+      "email":"support@lce.io",
+      "is_a_company":"true",
+      "city":"Nice",
+      "state":null
+    },
+    "parcels":[
+      {
+        "width":15.0,
+        "length":15.0,
+        "height":15.0,
+        "weight":2.0,
+        "description":null,
+        "value":null,
+        "currency":null
+      }
+    ],
+    "offer":{
+      "id":"ff75b691-a2e0-46b0-9909-d529b2dbb90c",
+      "quote_id":"cd8d1a03-bfec-4115-87ef-8f8ba91a7199",
+      "product_id":"371ce146-1e6c-4a44-9a43-e0f124818f99",
+      "product":{
+        "delay":"24",
+        "collection_informations":{
+          "en":"Post Office Drop Off \r\n",
+          "es":"Depósito en oficina de correos en Francia.",
+          "fr":"Dépôt en bureau de poste \r\n"
+        },
+        "delivery_informations":{
+          "en":"Drop off at your nearest Post Office \r\nNext day delivery before 13:00 pm\r\nDelivered wih POD\r\nMoney-back guarantee (Terms & conditions)\r\n\r\n",
+          "es":"Entrega en 24h antes de 13:00 (hora local)",
+          "fr":"J+1         \r\nLivraison le lendemain avant 13H"
+        },
+        "details":{
+          "en":"Drop off at your nearest Post Office \r\nNext day delivery before 13:00 pm\r\nDelivered wih POD\r\nMoney-back guarantee (Terms & conditions)\r\n",
+          "es":"Servicio Chronopost \r\nIMPORTANTE: peso máximo por paquete : 30 kg",
+          "fr":"Dépôt en bureau de poste. \r\nLivraison le lendemain avant 13H.\r\nPossibilité de collecte sur demande auprès de LCE pour les clients avec des envois réguliers.\r\nDélai garanti sous conditions (voir CGV).\r\n"
+        },
+        "export_from":[
+          "FR",
+          "MC"
+        ],
+        "id":"371ce146-1e6c-4a44-9a43-e0f124818f99",
+        "logo":"lce_yellow",
+        "code":"lce_yellow_express_13",
+        "name":"Lce Yellow Express 13",
+        "pick_up":false,
+        "drop_off":true,
+        "preset_delivery_location":false
+      },
+      "price":{
+        "formatted":"€6.25",
+        "currency":"EUR",
+        "amount":"6.25",
+        "amount_in_cents":625
+      },
+      "price_vat":{
+        "formatted":"€1.25",
+        "currency":"EUR",
+        "amount":"1.25",
+        "amount_in_cents":125
+      },
+      "total_price":{
+        "formatted":"€7.50",
+        "currency":"EUR",
+        "amount":"7.5",
+        "amount_in_cents":750
+      },
+      "collection_dates":null
+    },
+    "origin":null
+  }
+}

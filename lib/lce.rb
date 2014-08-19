@@ -2,6 +2,7 @@ require "lce/version"
 require "lce/client"
 require "lce/offer"
 require "lce/quote"
+require "lce/order"
 require "logger"
 require "awesome_print"
 

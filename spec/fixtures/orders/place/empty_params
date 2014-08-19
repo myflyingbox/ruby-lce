@@ -1,0 +1,15 @@
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.6.0
+Date: Tue, 19 Aug 2014 14:35:29 GMT
+Content-Type: application/json
+Content-Length: 509
+Connection: keep-alive
+
+{
+  "status":"failure",
+  "error":{
+    "type":"internal",
+    "message":"order[offer_id] is missing, order[shipper] is missing, order[shipper][name] is missing, order[shipper][street] is missing, order[shipper][state] is missing, order[shipper][phone] is missing, order[shipper][email] is missing, order[recipient] is missing, order[recipient][name] is missing, order[recipient][phone] is missing, order[recipient][email] is missing, order[parcels] is missing"
+  },
+  "self":"https://test.lce.io/v1/orders"
+}

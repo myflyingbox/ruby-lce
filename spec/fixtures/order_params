@@ -1,0 +1,23 @@
+{
+  "order":{
+    "offer_id": "ff75b691-a2e0-46b0-9909-d529b2dbb90c",
+    "shipper":{
+      "name": "Firstname Lastname",
+      "street": "street",
+      "phone": "+33699999999",
+      "email": "support@lce.io"
+      
+    },
+    "recipient":{
+      "name": "Firstname Lastname",
+      "street": "street",
+      "phone": "+33699999999",
+      "email": "support@lce.io"    
+    },
+    "parcels":[
+      {
+      }
+    ]
+  }
+}
+

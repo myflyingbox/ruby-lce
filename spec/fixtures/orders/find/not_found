@@ -1,0 +1,15 @@
+HTTP/1.1 404 Not Found
+Server: nginx/1.6.0
+Date: Tue, 19 Aug 2014 16:54:11 GMT
+Content-Type: application/json
+Content-Length: 185
+Connection: keep-alive
+
+{
+  "status":"failure",
+  "error":{
+    "type":"resource_not_found",
+    "message":"Order not found"
+  },
+  "self":"https://test.lce.io/v1/orders/8c43a2e1-a7ff-49fd-807e-3877d6dadc29"
+}

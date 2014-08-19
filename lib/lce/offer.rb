@@ -8,5 +8,11 @@ module Lce
       end
       
     end
+    
+    def place_order(params)
+      params.merge!(offer_id: id)
+      Order.place(params)    
+    end
+    
   end
 end

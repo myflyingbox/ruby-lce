@@ -1,0 +1,15 @@
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.6.0
+Date: Tue, 19 Aug 2014 14:52:35 GMT
+Content-Type: application/json
+Content-Length: 149
+Connection: keep-alive
+
+{
+  "status":"failure",
+  "error":{
+    "type":"internal",
+    "message":"order[offer_id] is missing"
+  },
+  "self":"https://test.lce.io/v1/orders"
+}
