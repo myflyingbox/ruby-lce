@@ -49,5 +49,37 @@ describe Lce::Offer do
       expect(order).to be_a(Lce::Order)
     end
   end    
+
+  describe "#available_delivery_locations" do 
+    let(:params) {
+      {
+        street: "37 Avenue Jean Médecin",
+        city: "Nice"        
+      }
+    }       
+    context 'when the product doesn\'t support preset delivery locations' do 
+      let(:id) {'ff75b691-a2e0-46b0-9909-d529b2dbb90c'}
+      it 'returns an empty array' do
+        stub_request(:get, "https://login:password@test.lce.io/v1/offers/#{id}")
+          .to_return(fixture('offers/find/found'))    
+      
+        offer = Lce::Offer.find(id)
+        expect(offer.available_delivery_locations(params).count).to eql(0)
+      end
+    end
+    context 'when the product support preset delivery locations' do
+      let(:id) {'563aeac0-4a88-4269-b9b7-48964a8678f0'}
+      let(:quote_id) {'cd8d1a03-bfec-4115-87ef-8f8ba91a7199'}
+      
+      it 'looks for available delivery locations for delivery in shop' do
+        stub_request(:get, "https://login:password@test.lce.io/v1/quotes/#{quote_id}")
+          .to_return(fixture('quotes/find/found'))    
+        stub_request(:get, "https://login:password@test.lce.io/v1/offers/#{id}/available_delivery_locations?location%5Bcity%5D=Nice&location%5Bstreet%5D=37%20Avenue%20Jean%20M%C3%A9decin")
+          .to_return(fixture('offers/available_delivery_locations/found'))      
+        offer = Lce::Quote.find(quote_id).offers.select{|o| o.id == id}.first
+        expect(offer.available_delivery_locations(params).count).to eql(23)
+      end
+    end    
+  end   
   
 end

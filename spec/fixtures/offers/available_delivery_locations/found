@@ -1,0 +1,785 @@
+HTTP/1.1 200 OK
+Server: nginx/1.6.0
+Date: Wed, 20 Aug 2014 13:41:51 GMT
+Content-Type: application/json
+Content-Length: 16359
+Connection: keep-alive
+Lce-Env: staging
+
+{
+  "status":"success",
+  "self":"https://test.lce.io/v1/offers/563aeac0-4a88-4269-b9b7-48964a8678f0/available_delivery_locations?location[city]=Nice&location[street]=37%20Avenue%20Jean%20M%C3%A9decin",
+  "data":[
+    {
+      "code":"3761R",
+      "company":"CASINO SUPERMARCHE",
+      "street":"2 RUE DEUDON",
+      "postal_code":"06000",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":6,
+          "hours":"08:30-12:00 12:00-19:00"
+        },
+        {
+          "day":5,
+          "hours":"08:30-12:00 12:00-20:00"
+        },
+        {
+          "day":4,
+          "hours":"08:30-12:00 12:00-20:00"
+        },
+        {
+          "day":3,
+          "hours":"08:30-12:00 12:00-20:00"
+        },
+        {
+          "day":2,
+          "hours":"08:30-12:00 12:00-20:00"
+        },
+        {
+          "day":1,
+          "hours":"08:30-12:00 12:00-19:00"
+        }
+      ]
+    },
+    {
+      "code":"7418P",
+      "company":"AQUARIUM EXOTIQUE",
+      "street":"5 BD VICTOR HUGO",
+      "postal_code":"06000",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":6,
+          "hours":"10:00-12:00 15:00-19:00"
+        },
+        {
+          "day":5,
+          "hours":"10:00-12:00 15:00-19:00"
+        },
+        {
+          "day":4,
+          "hours":"10:00-12:00 15:00-19:00"
+        },
+        {
+          "day":3,
+          "hours":"09:30-12:00 15:00-19:00"
+        },
+        {
+          "day":2,
+          "hours":"09:30-12:00 15:00-19:00"
+        },
+        {
+          "day":1,
+          "hours":"15:00-19:00"
+        }
+      ]
+    },
+    {
+      "code":"2595P",
+      "company":".Com",
+      "street":"12 RUE PERTINAX",
+      "postal_code":"06000",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":7,
+          "hours":"10:00-12:00 12:00-22:00"
+        },
+        {
+          "day":6,
+          "hours":"10:00-12:00 12:00-22:00"
+        },
+        {
+          "day":5,
+          "hours":"09:00-12:00 12:00-22:00"
+        },
+        {
+          "day":4,
+          "hours":"09:00-12:00 12:00-22:00"
+        },
+        {
+          "day":3,
+          "hours":"09:00-12:00 12:00-22:00"
+        },
+        {
+          "day":2,
+          "hours":"09:00-12:00 12:00-22:00"
+        },
+        {
+          "day":1,
+          "hours":"09:00-12:00 12:00-22:00"
+        }
+      ]
+    },
+    {
+      "code":"8982P",
+      "company":"FIGHTER SHOP",
+      "street":"4 BIS RUE BLACAS",
+      "postal_code":"06000",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":6,
+          "hours":"10:30-12:00 12:00-19:30"
+        },
+        {
+          "day":5,
+          "hours":"10:30-12:00 12:00-19:30"
+        },
+        {
+          "day":4,
+          "hours":"10:30-12:00 12:00-19:30"
+        },
+        {
+          "day":3,
+          "hours":"10:30-12:00 12:00-19:30"
+        },
+        {
+          "day":2,
+          "hours":"10:30-12:00 12:00-19:30"
+        },
+        {
+          "day":1,
+          "hours":"10:30-12:00 12:00-19:30"
+        }
+      ]
+    },
+    {
+      "code":"7223P",
+      "company":"SILVER FLORE",
+      "street":"11 RUE DE LHOTEL DES POSTES",
+      "postal_code":"06000",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":6,
+          "hours":"09:00-12:00"
+        },
+        {
+          "day":5,
+          "hours":"09:00-12:00 14:30-19:00"
+        },
+        {
+          "day":4,
+          "hours":"09:00-12:00 14:30-19:00"
+        },
+        {
+          "day":3,
+          "hours":"09:00-12:00 14:30-19:00"
+        },
+        {
+          "day":2,
+          "hours":"09:00-12:00 14:30-19:00"
+        },
+        {
+          "day":1,
+          "hours":"09:00-12:00 14:30-19:00"
+        }
+      ]
+    },
+    {
+      "code":"4512P",
+      "company":"LA VERDURA",
+      "street":"18 RUE GUIGLIA",
+      "postal_code":"06000",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":7,
+          "hours":"07:30-12:00 12:00-19:30"
+        },
+        {
+          "day":6,
+          "hours":"07:30-12:00 12:00-19:30"
+        },
+        {
+          "day":5,
+          "hours":"07:30-12:00 12:00-19:30"
+        },
+        {
+          "day":4,
+          "hours":"07:30-12:00 12:00-19:30"
+        },
+        {
+          "day":3,
+          "hours":"07:30-12:00 12:00-19:30"
+        },
+        {
+          "day":2,
+          "hours":"07:30-12:00 12:00-19:30"
+        }
+      ]
+    },
+    {
+      "code":"1791F",
+      "company":"NUMERICABLE Nice",
+      "street":"10 AVENUE FELIX FAURE",
+      "postal_code":"06000",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":6,
+          "hours":"10:00-12:00 14:00-18:00"
+        },
+        {
+          "day":5,
+          "hours":"09:45-12:00 12:00-18:30"
+        },
+        {
+          "day":4,
+          "hours":"09:45-12:00 12:00-18:30"
+        },
+        {
+          "day":3,
+          "hours":"09:45-12:00 12:00-18:30"
+        },
+        {
+          "day":2,
+          "hours":"09:45-12:00 12:00-18:30"
+        },
+        {
+          "day":1,
+          "hours":"09:45-12:00 12:00-18:30"
+        }
+      ]
+    },
+    {
+      "code":"3479R",
+      "company":"CASINO SUPERMARCHE",
+      "street":"5 AV ANCIENS COMBATTANTS D'AFR. NORD",
+      "postal_code":"06000",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":6,
+          "hours":"08:30-12:00 12:00-19:00"
+        },
+        {
+          "day":5,
+          "hours":"08:30-12:00 12:00-19:00"
+        },
+        {
+          "day":4,
+          "hours":"08:30-12:00 12:00-19:00"
+        },
+        {
+          "day":3,
+          "hours":"08:30-12:00 12:00-19:00"
+        },
+        {
+          "day":2,
+          "hours":"08:30-12:00 12:00-19:00"
+        },
+        {
+          "day":1,
+          "hours":"08:30-12:00 12:00-19:00"
+        }
+      ]
+    },
+    {
+      "code":"0905R",
+      "company":"OPTICIEN CORBINO",
+      "street":"44 BOULEVARD JEAN JAURES",
+      "postal_code":"06300",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":6,
+          "hours":"10:00-12:30 14:30-19:00"
+        },
+        {
+          "day":5,
+          "hours":"10:00-12:30 14:30-19:00"
+        },
+        {
+          "day":4,
+          "hours":"10:00-12:30 14:30-19:00"
+        },
+        {
+          "day":3,
+          "hours":"10:00-12:30 14:30-19:00"
+        },
+        {
+          "day":2,
+          "hours":"10:00-12:30 14:30-19:00"
+        }
+      ]
+    },
+    {
+      "code":"4727P",
+      "company":"AUX FLEURS DAMELYS",
+      "street":"110 BOULEVARD GAMBETTA",
+      "postal_code":"06000",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":5,
+          "hours":"11:00-12:00 12:00-20:30"
+        },
+        {
+          "day":4,
+          "hours":"11:00-12:00 12:00-20:30"
+        },
+        {
+          "day":3,
+          "hours":"11:00-12:00 12:00-20:30"
+        },
+        {
+          "day":2,
+          "hours":"11:00-12:00 12:00-20:30"
+        }
+      ]
+    },
+    {
+      "code":"7242P",
+      "company":"MYLADY",
+      "street":"36 RUE DE FRANCE",
+      "postal_code":"06000",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":6,
+          "hours":"10:00-12:00 12:00-19:00"
+        },
+        {
+          "day":5,
+          "hours":"10:00-12:00 12:00-19:00"
+        },
+        {
+          "day":4,
+          "hours":"10:00-12:00 12:00-19:00"
+        },
+        {
+          "day":3,
+          "hours":"10:00-12:00 12:00-19:00"
+        },
+        {
+          "day":2,
+          "hours":"10:00-12:00 12:00-19:00"
+        },
+        {
+          "day":1,
+          "hours":"10:00-12:00 12:00-19:00"
+        }
+      ]
+    },
+    {
+      "code":"3438P",
+      "company":"ALIMENTATION DES ARENES",
+      "street":"74 AVENUE DES ARENES DE CIMIEZ\nRESIDENCE L ORIENTALE",
+      "postal_code":"06000",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":7,
+          "hours":"07:00-13:00 15:30-19:30"
+        },
+        {
+          "day":6,
+          "hours":"07:00-13:00 15:30-19:30"
+        },
+        {
+          "day":5,
+          "hours":"07:00-13:00 15:30-19:30"
+        },
+        {
+          "day":4,
+          "hours":"07:00-13:00 15:30-19:30"
+        },
+        {
+          "day":3,
+          "hours":"07:00-13:00 15:30-19:30"
+        },
+        {
+          "day":2,
+          "hours":"07:00-13:00 15:30-19:30"
+        },
+        {
+          "day":1,
+          "hours":"07:00-13:00 15:30-19:30"
+        }
+      ]
+    },
+    {
+      "code":"3758R",
+      "company":"CASINO SUPERMARCHE",
+      "street":"20 BOULEVARD GAMBETTA",
+      "postal_code":"06000",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":6,
+          "hours":"08:30-12:00 12:00-19:00"
+        },
+        {
+          "day":5,
+          "hours":"08:30-12:00 12:00-19:00"
+        },
+        {
+          "day":4,
+          "hours":"08:30-12:00 12:00-19:00"
+        },
+        {
+          "day":3,
+          "hours":"08:30-12:00 12:00-19:00"
+        },
+        {
+          "day":2,
+          "hours":"08:30-12:00 12:00-19:00"
+        },
+        {
+          "day":1,
+          "hours":"08:30-12:00 12:00-19:00"
+        }
+      ]
+    },
+    {
+      "code":"0034R",
+      "company":"LE MONDE PAS CHER",
+      "street":"93 RUE DE FRANCE",
+      "postal_code":"06000",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":7,
+          "hours":"09:30-12:00 12:00-19:00"
+        },
+        {
+          "day":6,
+          "hours":"09:00-12:00 12:00-19:00"
+        },
+        {
+          "day":5,
+          "hours":"09:00-12:00 12:00-19:00"
+        },
+        {
+          "day":4,
+          "hours":"09:00-12:00 12:00-19:00"
+        },
+        {
+          "day":3,
+          "hours":"09:00-12:00 12:00-19:00"
+        },
+        {
+          "day":2,
+          "hours":"09:00-12:00 12:00-19:00"
+        },
+        {
+          "day":1,
+          "hours":"09:00-12:00 12:00-19:00"
+        }
+      ]
+    },
+    {
+      "code":"2932R",
+      "company":"AUX JARDINS DE FRANCE",
+      "street":"5 RUE DANTE",
+      "postal_code":"06000",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":7,
+          "hours":"09:00-13:00"
+        },
+        {
+          "day":6,
+          "hours":"09:00-13:00 16:00-19:00"
+        },
+        {
+          "day":5,
+          "hours":"09:00-13:00 16:00-19:00"
+        },
+        {
+          "day":4,
+          "hours":"09:00-13:00 16:00-19:00"
+        },
+        {
+          "day":3,
+          "hours":"09:00-13:00 16:00-19:00"
+        },
+        {
+          "day":2,
+          "hours":"09:00-13:00 16:00-19:00"
+        },
+        {
+          "day":1,
+          "hours":"09:00-13:00 16:00-19:00"
+        }
+      ]
+    },
+    {
+      "code":"3244R",
+      "company":"TABAC DU PARC IMPERIAL",
+      "street":"36 RUE PAUL ARENE",
+      "postal_code":"06000",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":7,
+          "hours":"08:30-12:30"
+        },
+        {
+          "day":6,
+          "hours":"08:00-12:00 12:00-19:30"
+        },
+        {
+          "day":5,
+          "hours":"08:00-12:00 12:00-19:30"
+        },
+        {
+          "day":4,
+          "hours":"08:00-12:00 12:00-19:30"
+        },
+        {
+          "day":3,
+          "hours":"08:00-12:00 12:00-19:30"
+        },
+        {
+          "day":2,
+          "hours":"08:00-12:00 12:00-19:30"
+        },
+        {
+          "day":1,
+          "hours":"08:00-12:00 12:00-19:30"
+        }
+      ]
+    },
+    {
+      "code":"9775P",
+      "company":"PRESSING RAINAUD",
+      "street":"37 BD AUGUSTE RAINAUD",
+      "postal_code":"06000",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":6,
+          "hours":"08:00-12:00"
+        },
+        {
+          "day":5,
+          "hours":"08:00-12:30 14:30-18:00"
+        },
+        {
+          "day":4,
+          "hours":"08:00-12:30 14:30-18:00"
+        },
+        {
+          "day":3,
+          "hours":"08:00-12:00"
+        },
+        {
+          "day":2,
+          "hours":"08:00-12:30 14:30-18:00"
+        },
+        {
+          "day":1,
+          "hours":"08:00-12:30 14:30-18:00"
+        }
+      ]
+    },
+    {
+      "code":"0806R",
+      "company":"LA BOITE A JOURNAUX",
+      "street":"126 RUE DE FRANCE",
+      "postal_code":"06000",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":7,
+          "hours":"08:00-13:00"
+        },
+        {
+          "day":6,
+          "hours":"08:00-13:30 15:00-18:00"
+        },
+        {
+          "day":5,
+          "hours":"07:00-13:30 15:30-18:30"
+        },
+        {
+          "day":4,
+          "hours":"07:00-13:30"
+        },
+        {
+          "day":3,
+          "hours":"07:00-13:30 15:30-18:30"
+        },
+        {
+          "day":2,
+          "hours":"07:00-13:30 15:30-18:30"
+        },
+        {
+          "day":1,
+          "hours":"07:00-13:30 15:30-18:30"
+        }
+      ]
+    },
+    {
+      "code":"3732R",
+      "company":"CASINO SUPERMARCHE",
+      "street":"28 bis Bd Jean Baptiste Verany",
+      "postal_code":"06300",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":6,
+          "hours":"08:30-12:00 12:00-19:00"
+        },
+        {
+          "day":5,
+          "hours":"08:30-12:00 12:00-19:00"
+        },
+        {
+          "day":4,
+          "hours":"08:30-12:00 12:00-19:00"
+        },
+        {
+          "day":3,
+          "hours":"08:30-12:00 12:00-19:00"
+        },
+        {
+          "day":2,
+          "hours":"08:30-12:00 12:00-19:00"
+        },
+        {
+          "day":1,
+          "hours":"08:30-12:00 12:00-19:00"
+        }
+      ]
+    },
+    {
+      "code":"2267R",
+      "company":"CASINO SHOP",
+      "street":"78-80 BOULEVARD DE CESSOLE",
+      "postal_code":"06100",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":6,
+          "hours":"08:30-12:15 16:00-19:00"
+        },
+        {
+          "day":5,
+          "hours":"08:00-12:15 15:30-19:00"
+        },
+        {
+          "day":4,
+          "hours":"08:00-12:15 15:30-19:00"
+        },
+        {
+          "day":3,
+          "hours":"08:00-12:15 15:30-19:00"
+        },
+        {
+          "day":2,
+          "hours":"08:00-12:15 15:30-19:00"
+        },
+        {
+          "day":1,
+          "hours":"08:00-12:15 15:30-19:00"
+        }
+      ]
+    },
+    {
+      "code":"3692P",
+      "company":"COUP DE COEUR",
+      "street":"95 BD DE CESSOLE",
+      "postal_code":"06100",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":6,
+          "hours":"09:00-12:30"
+        },
+        {
+          "day":5,
+          "hours":"09:00-12:30 15:00-19:00"
+        },
+        {
+          "day":4,
+          "hours":"09:00-12:30 15:00-19:00"
+        },
+        {
+          "day":3,
+          "hours":"09:00-12:30 15:00-19:00"
+        },
+        {
+          "day":2,
+          "hours":"09:00-12:30 15:00-19:00"
+        },
+        {
+          "day":1,
+          "hours":"09:00-12:30 15:00-19:00"
+        }
+      ]
+    },
+    {
+      "code":"3759R",
+      "company":"CASINO SUPERMARCHE",
+      "street":"2 AVENUE GLORIA",
+      "postal_code":"06200",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":6,
+          "hours":"08:30-12:00 12:00-18:30"
+        },
+        {
+          "day":5,
+          "hours":"08:30-12:00 12:00-18:30"
+        },
+        {
+          "day":4,
+          "hours":"08:30-12:00 12:00-18:30"
+        },
+        {
+          "day":3,
+          "hours":"08:30-12:00 12:00-18:30"
+        },
+        {
+          "day":2,
+          "hours":"08:30-12:00 12:00-18:30"
+        },
+        {
+          "day":1,
+          "hours":"08:30-12:00 12:00-18:30"
+        }
+      ]
+    },
+    {
+      "code":"7204P",
+      "company":"SMMS",
+      "street":"17 RUE ACCHIARDIDE SAINT-LÉGER",
+      "postal_code":"06300",
+      "city":"NICE",
+      "opening_hours":[
+        {
+          "day":6,
+          "hours":"10:00-13:00 14:00-19:00"
+        },
+        {
+          "day":5,
+          "hours":"10:00-13:00 14:00-19:00"
+        },
+        {
+          "day":4,
+          "hours":"10:00-13:00 14:00-19:00"
+        },
+        {
+          "day":3,
+          "hours":"10:00-13:00 14:00-19:00"
+        },
+        {
+          "day":2,
+          "hours":"10:00-13:00 14:00-19:00"
+        },
+        {
+          "day":1,
+          "hours":"10:00-13:00 14:00-19:00"
+        }
+      ]
+    }
+  ]
+}
