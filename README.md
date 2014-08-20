@@ -50,7 +50,7 @@ Here are all available configuration options with their default values :
 
 ## Usage
 
-Once configured, you can start making request to the lce webservices.
+Once configured, you can start making request to the lce webservices. The full documentation for all requests and attributes is available at https://www.lce.io/docs
 
 ### Requesting a quote
 
