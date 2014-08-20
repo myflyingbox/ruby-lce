@@ -61,7 +61,7 @@ Once configured, you can start making request to the lce webservices. The full d
         {length: 25,height: 25, width: 25, weight: 3}
       ]
     }
-    quote = Lce::Quote.request(quuote_params)
+    quote = Lce::Quote.request(quote_params)
 
 ### Placing an order
 
@@ -69,8 +69,8 @@ Once configured, you can start making request to the lce webservices. The full d
       shipper: {name: "Firstname Lastname", street: "999, street name", phone: "+33699999999", email: "support@lce.io"},
       recipient: {name: "Firstname Lastname", street: "111, other street", phone: "+33600000", email: "support@lce.io"},
       parcels: [{description: 'Gift'}]
-
     }
+    
     # First, we select an offer we want to order (for this example, we are using the first one)
     offer = quote.offers.first
     order = offer.place_order(order_params)
