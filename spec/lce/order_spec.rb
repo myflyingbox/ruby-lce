@@ -106,7 +106,6 @@ describe Lce::Order do
         
       order = Lce::Order.find(id)
       labels_file = File.read('spec/fixtures/orders/labels/labels.pdf', {mode: 'rb' })
-      order.write_labels("grouooo.pdf")
       expect(order.labels).to eql(labels_file)
     end      
   end    
