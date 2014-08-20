@@ -25,9 +25,9 @@ module Lce
       HOSTS[Lce.configuration.environment]
     end
     
-    def version
-      raise VersionError.new("Wrong API version",' wrong_api_version', "Version must be 1.") if Lce.configuration.version != 1
-      'v'+Lce.configuration.version.to_s
+    def api_version
+      raise VersionError.new("Wrong API version",' wrong_api_version', "Version must be 1.") if Lce.configuration.api_version != 1
+      'v'+Lce.configuration.api_version.to_s
     end
 
   end

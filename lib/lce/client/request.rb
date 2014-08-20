@@ -16,7 +16,7 @@ module Lce
 
       def path(resource = nil, id = nil, action = nil, format = nil)
         path = []
-        path << version << resource.to_s if resource
+        path << api_version << resource.to_s if resource
         path << id.to_s if id
         path << action.to_s if action
         path = '/'+path.join('/')

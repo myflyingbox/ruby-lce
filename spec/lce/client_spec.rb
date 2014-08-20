@@ -17,13 +17,13 @@ describe Lce::Client do
       expect(subject.host).to eql('https://api.lce.io')
     end
   end
-  describe "#version" do
+  describe "#api version" do
     it 'returns a string of the API version' do
-      expect(subject.version).to eql('v1')
+      expect(subject.api_version).to eql('v1')
     end
     it 'needs a valid version' do
-      Lce.configuration.version = 'version'      
-      expect { subject.version }.to raise_error(Lce::Client::Errors::VersionError)
+      Lce.configuration.api_version = 'api_version'      
+      expect { subject.api_version }.to raise_error(Lce::Client::Errors::VersionError)
     end    
   end  
   describe "#path" do
@@ -32,7 +32,7 @@ describe Lce::Client do
     end
     context 'with a resource' do
       it 'returns a path with aversion and a resource' do
-        Lce.configuration.version = 1
+        Lce.configuration.api_version = 1
         expect(subject.send(:path, :quotes).to_s).to eql('/v1/quotes')
       end
 

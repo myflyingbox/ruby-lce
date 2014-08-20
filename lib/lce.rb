@@ -42,20 +42,30 @@ module Lce
 
 
   class Configuration
-    attr_accessor :login, :password, :environment, :version, :http_adapter, :raise_lce_errors, :logger
+    attr_accessor :login, :password, :environment, :api_version, :http_adapter, :raise_lce_errors, :logger, :application, :version
 
     def initialize
       @environment = :staging
-      @version = 1
+      @api_version = 1
       @http_adapter = Faraday.default_adapter
       @raise_lce_errors = true
       @logger = Logger.new(STDOUT)
-      @logger.level = Logger::DEBUG       
+      @logger.level = Logger::DEBUG   
+      @application = 'ruby-lce'    
+      @version = Lce::VERSION
     end
     
     def environment=(value)
       raise 'Environment must be :staging or :production' unless [:staging, :production].include?(value)
       @environment = value
+    end
+    
+    def application=(app)
+      @application = "#{app} (ruby-lce)"
+    end
+
+    def version=(version)
+      @version = "#{version} (#{Lce::VERSION})"
     end
   end
 end
