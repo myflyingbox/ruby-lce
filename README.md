@@ -52,7 +52,7 @@ Here are all available configuration options with their default values :
 
 Once configured, you can start making request to the lce webservices.
 
-### Request a quote
+### Requesting a quote
 
     quote_params = {
       shipper: {city: "Toulouse", postal_code: "31000", country:"FR"},
@@ -63,7 +63,7 @@ Once configured, you can start making request to the lce webservices.
     }
     quote = Lce::Quote.request(quuote_params)
 
-### Place an order
+### Placing an order
 
     order_params = {
       shipper: {name: "Firstname Lastname", street: "999, street name", phone: "+33699999999", email: "support@lce.io"},
@@ -75,7 +75,7 @@ Once configured, you can start making request to the lce webservices.
     offer = quote.offers.first
     order = offer.place_order(order_params)
 
-### Retrieve the labels
+### Retrieving the labels
 
     # We can retrieve the labels
     labels = order.labels
@@ -84,7 +84,7 @@ Once configured, you can start making request to the lce webservices.
       f.write(labels)
     end  
 
-### Get the tracking informations
+### Getting the tracking informations
     
     # And then, we can get the trakcing events by parcels
     order.tracking
