@@ -86,7 +86,7 @@ Once configured, you can start making request to the lce webservices. The full d
 
 ### Getting the tracking informations
     
-    # And then, we can get the trakcing events by parcels
+    # And then, we can get the tracking events by parcels
     order.tracking
 
 ## Contributing
