@@ -43,7 +43,9 @@ module Lce
     end  
     
     def tracking
-      @tracking = Lce.client.get('orders', id, 'tracking')      
+      Lce.client.get('orders', id, 'tracking').map! do |t|
+        Hashie::Mash.new(t)
+      end
     end        
   end
 end
