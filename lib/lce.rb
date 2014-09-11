@@ -1,5 +1,6 @@
 require "lce/version"
 require "lce/client"
+require "lce/product"
 require "lce/offer"
 require "lce/quote"
 require "lce/order"
