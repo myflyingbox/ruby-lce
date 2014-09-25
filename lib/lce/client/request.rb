@@ -70,7 +70,7 @@ module Lce
               raise Lce::Client::AccessDenied.new(response.body.error.message, response.body.error.type, response.body.error.details)
             when 'account_disabled'
               raise Lce::Client::AccountDisabled.new(response.body.error.message, response.body.error.type, response.body.error.details)
-            when 'internal', 'resource_not_found'
+            else
               raise Lce::Client::LceError.new(response.body.error.message, response.body.error.type, response.body.error.details)              
           end
         end
