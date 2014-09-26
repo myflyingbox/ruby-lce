@@ -29,10 +29,19 @@ module Lce
         new(response)
       end
       
+      def labels_for(id)
+        order = new(id: id)
+        order.labels
+      end  
+          
+      def tracking_for(id)
+        order = new(id: id)
+        order.tracking
+      end        
     end
 
     def labels
-      @labels ||= Lce.client.get('orders', id, 'labels', 'pdf')      
+      @labels ||= Lce.client.get('orders', id, 'labels', 'pdf') 
     end    
 
     def write_labels(name = nil)    
