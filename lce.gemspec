@@ -26,4 +26,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "faraday_middleware", "~> 0.12.2"
   spec.add_dependency "faraday_middleware-parse_oj", "~> 0.3.2"
   spec.add_dependency "hashie", "~> 3.6.0"  
+  spec.add_dependency 'awesome_print', '~> 1.8.0'
 end
