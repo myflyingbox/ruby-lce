@@ -2,12 +2,12 @@ require 'spec_helper'
 
 describe Lce do
   describe ".configure" do
-   
+
     it 'has a configuration' do
       Lce.reset
       expect(Lce.configuration).to be_a(Lce::Configuration)
     end
-   
+
     it 'has a default environment' do
       Lce.reset
       expect(Lce.configuration.environment).to be :staging
@@ -32,9 +32,9 @@ describe Lce do
       expect(Lce.configuration.version).to be Lce::VERSION
     end
 
-    
+
     it 'doesn\'t have a default password' do
-      Lce.reset    
+      Lce.reset
       expect(Lce.configuration.password).to be_nil
     end
 
@@ -45,10 +45,10 @@ describe Lce do
           config.login = 'login'
           config.password = 'password'
           config.application = 'My Great App'
-          config.version = 'E.32.R526'          
-        end         
+          config.version = 'E.32.R526'
+        end
       end
-      
+
       it 'can override default values' do
         expect(Lce.configuration.environment).to be :production
       end
@@ -56,22 +56,22 @@ describe Lce do
       it 'can set a login' do
         expect(Lce.configuration.login).to eq('login')
       end
-      
+
       it 'can set a password' do
         expect(Lce.configuration.password).to eq('password')
       end
 
       it 'customizes app name but retains the gem\'s name' do
         expect(Lce.configuration.application).to eq("My Great App (ruby-lce)")
-      end      
+      end
 
       it 'customizes app version but retains the gem\'s version' do
         expect(Lce.configuration.version).to eq("E.32.R526 (#{Lce::VERSION})")
-      end      
+      end
 
-    end      
+    end
   end
-  describe '.check' do 
+  describe '.check' do
     context 'without authentication' do
       before do
         Lce.configure do |config|
@@ -79,10 +79,10 @@ describe Lce do
           config.login = nil
           config.password = nil
           config.logger.level = Logger::FATAL
-        end             
+        end
       end
       it 'raises an AccessDenied exception when not authenticated properly' do
-        stub_request(:get, "https://test.lce.io/").to_return(fixture('access_denied'))
+        stub_request(:get, "https://test.myflyingbox.com/").to_return(fixture('access_denied'))
         expect {Lce.check}.to raise_error Lce::Client::Errors::AccessDenied
       end
     end
@@ -93,17 +93,21 @@ describe Lce do
           config.login = 'login'
           config.password = 'password'
           config.logger.level = Logger::FATAL
-        end              
+        end
       end
       it 'raises an AccountDisabled exception when account is disabled' do
-        stub_request(:get, "https://login:password@test.lce.io/").to_return(fixture('account_disabled'))
+        stub_request(:get, "https://test.myflyingbox.com/")
+          .with(basic_auth: ['login', 'password'])
+          .to_return(fixture('account_disabled'))
         expect {Lce.check}.to raise_error Lce::Client::Errors::AccountDisabled
-      end    
-      it 'return a description of the service' do    
-        stub_request(:get, "https://login:password@test.lce.io/").to_return(fixture('check'))
+      end
+      it 'return a description of the service' do
+        stub_request(:get, "https://test.myflyingbox.com/")
+          .with(basic_auth: ['login', 'password'])
+          .to_return(fixture('check'))
         expect(Lce.check.host).to eql('test.lce.io')
-      end    
-    end    
+      end
+    end
 
   end
 end

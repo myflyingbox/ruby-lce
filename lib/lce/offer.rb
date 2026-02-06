@@ -6,12 +6,12 @@ module Lce
         response = Lce.client.get('offers', id)
         new(response)
       end
-      
+
     end
-    
+
     def place_order(params)
       params.merge!(offer_id: id)
-      Order.place(params)    
+      Order.place(params)
     end
 
     def available_delivery_locations(params)
@@ -20,6 +20,6 @@ module Lce
         Hashie::Mash.new(l)
       end
     end
-    
+
   end
 end

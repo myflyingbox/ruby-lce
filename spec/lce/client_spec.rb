@@ -9,23 +9,23 @@ describe Lce::Client do
   end
   describe "#host" do
     it 'returns the correct host for the staging environment' do
-      expect(subject.host).to eql('https://test.lce.io')
+      expect(subject.host).to eql('https://test.myflyingbox.com')
     end
 
     it 'returns the correct host for the production environment' do
       Lce.configuration.environment = :production
-      expect(subject.host).to eql('https://api.lce.io')
+      expect(subject.host).to eql('https://api.myflyingbox.com')
     end
   end
   describe "#api version" do
     it 'returns a string of the API version' do
-      expect(subject.api_version).to eql('v1')
+      expect(subject.api_version).to eql('v2')
     end
     it 'needs a valid version' do
-      Lce.configuration.api_version = 'api_version'      
+      Lce.configuration.api_version = 'api_version'
       expect { subject.api_version }.to raise_error(Lce::Client::Errors::VersionError)
-    end    
-  end  
+    end
+  end
   describe "#path" do
     it 'returns a root path as default' do
       expect(subject.send(:path).to_s).to eql('/')
@@ -37,5 +37,5 @@ describe Lce::Client do
       end
 
     end
-  end    
+  end
 end

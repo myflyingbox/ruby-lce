@@ -57,7 +57,7 @@ module Lce
     end
 
     def environment=(value)
-      raise 'Environment must be :staging or :production' unless [:staging, :production].include?(value)
+      raise 'Environment must be :staging or :production' unless [:development, :staging, :production].include?(value)
       @environment = value
     end
 
